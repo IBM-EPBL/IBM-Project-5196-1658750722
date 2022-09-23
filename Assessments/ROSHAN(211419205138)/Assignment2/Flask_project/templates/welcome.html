@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Posts</title>
+{% endblock %}
+
+{% block body %}
+    {% for post in posts %}
+        <h2>{{ post.username }}</h2>
+
+        {% if post.email %}
+            <h3>By: {{ post.email }}</h3>
+        {% else %}
+            <h3>By: N/A</h3>
+        {% endif %}
+
+        <p>{{ post.password }}</p>
+        <p>{{ post.date_posted}}</p>
+    {% endfor%}
+
+{% endblock %}

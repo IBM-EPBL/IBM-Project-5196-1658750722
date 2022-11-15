@@ -22,7 +22,7 @@ def send_mail(usermail,usersubject,usercontent,otp):
 
 
     try:
-        sg = SendGridAPIClient('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')
+        sg = SendGridAPIClient('')
         response = sg.send(message)
         print(response.status_code)
         print(response.body)

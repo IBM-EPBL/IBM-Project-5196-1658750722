@@ -9,7 +9,7 @@ from key_search import search_by_key
 
 
 conn = ibm_db.connect(
-    "DATABASE=bludb;HOSTNAME=fbd88901-ebdb-4a4f-a32e-9822b9fb237b.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=32731;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=spk61607;PWD=yWm4ioBhz9v4QJ0W",
+    "DATABASE=#;HOSTNAME=#;PORT=#;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=#;PWD=#",
     '', '')
 
 app=Flask(__name__)

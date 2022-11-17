@@ -3,7 +3,7 @@ import pycountry
 
 def news_category(country,category):
     # you have to get your api key from newapi.com and then paste it below
-    newsapi = NewsApiClient(api_key='5b528b181dc34d419a6e6a207fef3f6d')
+    newsapi = NewsApiClient(api_key='')
 
     # now we will take name of country from user as input
     input_country = country
@@ -66,7 +66,7 @@ def news_category(country,category):
 
 def news_headlines(country):
 	# you have to get your api key from newapi.com and then paste it below
-	newsapi = NewsApiClient(api_key='5b528b181dc34d419a6e6a207fef3f6d')
+	newsapi = NewsApiClient(api_key='')
 
 	# now we will take name of country from user as input
 	input_country = country

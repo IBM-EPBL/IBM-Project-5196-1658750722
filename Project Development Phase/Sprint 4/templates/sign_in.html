@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Tracker Application</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <script src="static/sign_in.js"></script>
+
+<style>
+
+    .list-group {
+    margin: 10px 0;
+}
+
+.list-group-item {
+    margin: 0;
+    padding: 0;
+}
+
+.alert {
+    margin: 0;
+}
+
+</style>
+
+</head>
+
+<body>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes list-group">
+        {% for message in messages %}
+        <li class="list-group-item">
+            <div class="alert alert-success">{{message}}</div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endwith %}
+    <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="POST" action="/" name="signin" onsubmit="return validateform()">
+                <h2 class="text-center"><strong>SIGN IN</strong></h2>
+                <div class="form-group"><input class="form-control" type="email" name="email" id="email" placeholder="Email"></div>
+                <div class="form-group"><input class="form-control" type="password" name="password" id="password" placeholder="Password"></div>
+               
+                <div class="form-group">
+                    <a href="/forget_password" class="already">Forget password? Click here.</a>
+                </div>
+                <div class="form-group"><input type="submit" class="btn btn-primary btn-block" value="Sign in"></div><a href="/sign_up" class="already">Dont have an account? Sign up here.</a></form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

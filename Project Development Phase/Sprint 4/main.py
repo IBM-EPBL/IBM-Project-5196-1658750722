@@ -1,6 +1,4 @@
 from flask import Flask,render_template,request,url_for,redirect,session,flash
-import ibm_boto3
-from ibm_botocore.client import Config, ClientError
 import ibm_db
 from headlines import news_headlines
 from headlines import news_category
@@ -299,6 +297,11 @@ def logout():
     session.pop('email', None)
 
     return redirect('/')
+
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 
 
